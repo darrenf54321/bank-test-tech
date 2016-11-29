@@ -32,4 +32,8 @@ class BankAccount
     @transactions
   end
 
+  def date_today
+    @date
+  end
+
 end
