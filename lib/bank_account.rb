@@ -1,13 +1,21 @@
+require 'date'
+
 class BankAccount
 
   def initialize
     @balance = 0
-    @date = 29/12/2016
+    @date = Date.today
     @transactions = []
   end
 
   def show_balance
-    @balance
+    if @balance == 0
+      @balance
+    elsif @balance > 0
+      @balance.to_s + (" credit")
+    else
+      @balance.to_s + (" debit")
+    end
   end
 
   def deposit(amount)

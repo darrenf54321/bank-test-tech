@@ -10,13 +10,13 @@ describe BankAccount do
 
   it 'can make a deposit' do
     account.deposit(150)
-    expect(account.show_balance).to eq(150)
+    expect(account.show_balance).to eq("150 credit")
   end
 
   it 'can make a withdrawal' do
     account.deposit(500)
     account.withdrawal(100)
-    expect(account.show_balance).to eq(400)
+    expect(account.show_balance).to eq("400 credit")
   end
 
   it 'displays all transactions' do
