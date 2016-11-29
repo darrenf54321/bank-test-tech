@@ -12,17 +12,16 @@ class BankAccount
 
   def deposit(amount)
     @balance = @balance + amount
-    @transactions << amount
+    @transactions << (amount.to_s + (" credit"))
   end
 
   def withdrawal(amount)
     @balance = @balance - amount
-    @transactions << amount
+    @transactions << (amount.to_s + (" debit"))
   end
 
   def display_transactions
     @transactions
   end
-
 
 end
