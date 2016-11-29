@@ -12,9 +12,9 @@ class BankAccount
     if @balance == 0
       @balance
     elsif @balance > 0
-      @balance.to_s + (" credit")
+      @date.to_s + " £" + @balance.to_s + (" credit")
     else
-      @balance.to_s + (" debit")
+      @date.to_s + " £" + @balance.to_s + (" debit")
     end
   end
 
