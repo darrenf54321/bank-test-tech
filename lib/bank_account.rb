@@ -1,5 +1,3 @@
-
-
 class BankAccount
 
   def initialize
@@ -14,10 +12,16 @@ class BankAccount
 
   def deposit(amount)
     @balance = @balance + amount
+    @transactions << amount
   end
 
   def withdrawal(amount)
     @balance = @balance - amount
+    @transactions << amount
+  end
+
+  def display_transactions
+    @transactions
   end
 
 
