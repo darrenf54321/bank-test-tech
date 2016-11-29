@@ -12,7 +12,12 @@ describe BankAccount do
 
   it 'can make a deposit' do
     account.deposit(150)
-    expect(account.show_balance).to eq 150
+    expect(account.show_balance).to eq(150)
+  end
+
+  it 'can make a wothdrawal' do
+    account.withdrawal(100)
+    expect(account.show_balance).to eq(-100)
   end
 
 
